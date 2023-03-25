@@ -30,7 +30,7 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'dashboard',
     component: Dashboard,
     meta: {
-      requiresAuth: false,
+      requiresAuth: true,
     },
   },
   {
