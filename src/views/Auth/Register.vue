@@ -74,7 +74,7 @@
         <div
           class="hidden md:block md:w-1/2 rounded-r-lg"
           style="
-            background: url('https://images.unsplash.com/photo-1515965885361-f1e0095517ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80');
+            background: url('https://images.pexels.com/photos/1905054/pexels-photo-1905054.jpeg?cs=srgb&dl=pexels-loc-dang-1905054.jpg&fm=jpg');
             background-size: cover;
             background-position: center center;
           "
@@ -115,21 +115,20 @@ export default defineComponent({
       email: null,
       password: null,
       rememberMe: false,
+      // eslint-disable-next-line prettier-vue/prettier
       name:null,
     })
 
     const register = async () => {
 
       if (!form.value.email || !form.value.password || !form.value.name) {
-        window.$message.error("Merci de renseigner tous les champs.")
+        window.$message.error('Merci de renseigner tous les champs.')
         return
       }
 
-      await userStore.register(form.value.name,form.value.email, form.value.password).then(()=>{
-         router.push('/')
+      await userStore.register(form.value.name, form.value.email, form.value.password).then(() => {
+        router.push('/')
       })
-
-      
     }
 
     return {

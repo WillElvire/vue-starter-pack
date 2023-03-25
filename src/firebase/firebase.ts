@@ -1,4 +1,3 @@
-import { DocumentToSign, SignedDocument } from '@/stores/document'
 import { User } from '@/stores/user'
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -39,7 +38,7 @@ export const signInWithGoogle = () => {
 }
 
 //sample of firebase function
-export const getUserDocument = async (uid: string) => {
+export const getUserDocument = async (uid:string) => {
   if (!uid) return null
 
   try {

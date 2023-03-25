@@ -47,7 +47,7 @@ export default defineComponent({
           "
         >
           <span class="text-2xl font-black leading-none text-gray-900 select-none logo"
-            >FA E-Sign<span class="text-indigo-600">.</span></span
+            >VSP<span class="text-indigo-600">.</span></span
           >
         </a>
       </div>

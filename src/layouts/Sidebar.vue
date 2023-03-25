@@ -1,19 +1,27 @@
+<!-- eslint-disable vue/no-unused-components -->
 <script lang="ts">
 import { defineComponent, ref, h } from 'vue'
-
 import NavLink from '@/components/NavLink.vue'
-
 import { NLayoutSider, NIcon, NMenu } from 'naive-ui'
-import { LayoutGrid, CaretDown, Paperclip } from '@vicons/carbon'
+import { LayoutGrid, CaretDown, Paperclip,Plus , Notification } from '@vicons/carbon'
 
 const menuOptions = [
   {
-    label: 'Tableau de bord',
+    label: 'Dashboard',
     key: 'dashboard',
     to: '/dashboard',
   },
+  {
+    label: 'Publication',
+    key: 'home',
+    to: '/dashboard',
+  },
+  {
+    label: 'Create',
+    key: 'create',
+    to: '/dashboard',
+  },
 ]
-
 export default defineComponent({
   name: 'Sidebar',
 
@@ -25,6 +33,8 @@ export default defineComponent({
     NMenu,
     Paperclip,
     NavLink,
+    Plus,
+    Notification
   },
 
   setup() {
@@ -45,6 +55,12 @@ export default defineComponent({
       renderMenuIcon(option) {
         if (option.key === 'dashboard') {
           return h(NIcon, null, { default: () => h(LayoutGrid) })
+        }
+        if (option.key === 'home') {
+          return h(NIcon, null, { default: () => h(Notification) })
+        }
+        if (option.key === 'create') {
+          return h(NIcon, null, { default: () => h(Plus) })
         }
       },
       expandIcon() {
